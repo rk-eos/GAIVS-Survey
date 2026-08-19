@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Survey — GAIVS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo-mark"><span class="globe"></span> AI GLOBAL VENTURE STUDIO</div>
+  <nav><a href="index.html">← Back</a></nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Student Feedback</div>
+  <h1>How was your <span class="accent">venture-building</span> journey?</h1>
+  <p class="sub">Quick, honest, and anonymous to your teammates — just for our team. Takes about 5 minutes.</p>
+  <div class="time-chip">⏱ About 5 minutes</div>
+</section>
+
+<div class="form-wrap">
+  <div class="card">
+
+    <form id="studentForm" novalidate>
+
+      <div class="q-block">
+        <span class="q-number">Q1</span>
+        <p class="q-text">Overall, how much did you enjoy Global AI Venture Studio?</p>
+        <div class="options scale-row" role="radiogroup">
+          <label class="option"><input type="radio" name="enjoyment" value="1" required><span>1</span></label>
+          <label class="option"><input type="radio" name="enjoyment" value="2"><span>2</span></label>
+          <label class="option"><input type="radio" name="enjoyment" value="3"><span>3</span></label>
+          <label class="option"><input type="radio" name="enjoyment" value="4"><span>4</span></label>
+          <label class="option"><input type="radio" name="enjoyment" value="5"><span>5</span></label>
+        </div>
+        <div class="scale-labels"><span>Not at all</span><span>Extremely</span></div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q2</span>
+        <p class="q-text">Compared to before the program, how confident do you feel using AI tools responsibly?</p>
+        <div class="options stacked">
+          <label class="option"><input type="radio" name="ai_confidence" value="Much more confident" required><span>Much more confident</span></label>
+          <label class="option"><input type="radio" name="ai_confidence" value="A little more confident"><span>A little more confident</span></label>
+          <label class="option"><input type="radio" name="ai_confidence" value="About the same"><span>About the same</span></label>
+          <label class="option"><input type="radio" name="ai_confidence" value="Less confident"><span>Less confident</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q3</span>
+        <p class="q-text">Which part of the program did you enjoy most?</p>
+        <div class="options stacked">
+          <label class="option"><input type="radio" name="favorite_part" value="Week 1: The Spark" required><span>Week 1: The Spark (finding the problem)</span></label>
+          <label class="option"><input type="radio" name="favorite_part" value="Week 2: The Build"><span>Week 2: The Build (prototype)</span></label>
+          <label class="option"><input type="radio" name="favorite_part" value="Week 3: The Brand"><span>Week 3: The Brand (pitch deck)</span></label>
+          <label class="option"><input type="radio" name="favorite_part" value="Week 4: The Pitch"><span>Week 4: The Pitch (recording & submitting)</span></label>
+          <label class="option"><input type="radio" name="favorite_part" value="Guest speakers"><span>Guest speakers</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q4</span>
+        <p class="q-text">Was the workload too easy, too hard, or about right?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="workload" value="Too easy" required><span>Too easy</span></label>
+          <label class="option"><input type="radio" name="workload" value="A bit easy"><span>A bit easy</span></label>
+          <label class="option"><input type="radio" name="workload" value="About right"><span>About right</span></label>
+          <label class="option"><input type="radio" name="workload" value="A bit hard"><span>A bit hard</span></label>
+          <label class="option"><input type="radio" name="workload" value="Too hard"><span>Too hard</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q5</span>
+        <p class="q-text">How useful was learning to write good prompts (Role / Audience / Format / Scope)?</p>
+        <div class="options scale-row">
+          <label class="option"><input type="radio" name="prompting_useful" value="1" required><span>1</span></label>
+          <label class="option"><input type="radio" name="prompting_useful" value="2"><span>2</span></label>
+          <label class="option"><input type="radio" name="prompting_useful" value="3"><span>3</span></label>
+          <label class="option"><input type="radio" name="prompting_useful" value="4"><span>4</span></label>
+          <label class="option"><input type="radio" name="prompting_useful" value="5"><span>5</span></label>
+        </div>
+        <div class="scale-labels"><span>Not useful</span><span>Extremely useful</span></div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q6</span>
+        <p class="q-text">Did you ever catch Sparky (or Janus, the AI tutor) making something up — a hallucination?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="caught_hallucination" value="Yes" required><span>Yes</span></label>
+          <label class="option"><input type="radio" name="caught_hallucination" value="No"><span>No</span></label>
+          <label class="option"><input type="radio" name="caught_hallucination" value="Not sure"><span>Not sure</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q7</span>
+        <p class="q-text">Going forward, how likely are you to double-check facts an AI tool gives you?</p>
+        <div class="options scale-row">
+          <label class="option"><input type="radio" name="future_verification" value="1" required><span>1</span></label>
+          <label class="option"><input type="radio" name="future_verification" value="2"><span>2</span></label>
+          <label class="option"><input type="radio" name="future_verification" value="3"><span>3</span></label>
+          <label class="option"><input type="radio" name="future_verification" value="4"><span>4</span></label>
+          <label class="option"><input type="radio" name="future_verification" value="5"><span>5</span></label>
+        </div>
+        <div class="scale-labels"><span>Not likely</span><span>Extremely likely</span></div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q8</span>
+        <p class="q-text">How helpful was Leesa (the Discord assistant) in keeping you on track with deadlines and reminders?</p>
+        <div class="options stacked">
+          <label class="option"><input type="radio" name="leesa_helpfulness" value="Very helpful" required><span>Very helpful</span></label>
+          <label class="option"><input type="radio" name="leesa_helpfulness" value="Somewhat helpful"><span>Somewhat helpful</span></label>
+          <label class="option"><input type="radio" name="leesa_helpfulness" value="Not helpful"><span>Not helpful</span></label>
+          <label class="option"><input type="radio" name="leesa_helpfulness" value="Didn't really interact with Leesa"><span>I didn't really interact with Leesa</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q9</span>
+        <p class="q-text">Was registering and logging into ailiteracy.cfgltoday.org / SparkEd easy?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="registration_ease" value="Very easy" required><span>Very easy</span></label>
+          <label class="option"><input type="radio" name="registration_ease" value="Easy"><span>Easy</span></label>
+          <label class="option"><input type="radio" name="registration_ease" value="Okay"><span>Okay</span></label>
+          <label class="option"><input type="radio" name="registration_ease" value="Difficult"><span>Difficult</span></label>
+          <label class="option"><input type="radio" name="registration_ease" value="Very difficult"><span>Very difficult</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q10</span>
+        <p class="q-text">Did you have any technical problems with SparkEd, Discord, Sparky, or CodeBox?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="tech_issues" value="Yes" required data-followup-trigger="tech_issues_detail" data-followup-value="Yes"><span>Yes</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="tech_issues" value="No" data-followup-trigger="tech_issues_detail" data-followup-value="Yes"><span>No</span>
+          </label>
+        </div>
+        <textarea id="tech_issues_detail" class="followup" name="tech_issues_detail" rows="2" placeholder="What happened?"></textarea>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q11</span>
+        <p class="q-text">How did you first hear about this program?</p>
+        <div class="options stacked">
+          <label class="option"><input type="radio" name="heard_about" value="School" required><span>School</span></label>
+          <label class="option"><input type="radio" name="heard_about" value="Friend"><span>Friend</span></label>
+          <label class="option"><input type="radio" name="heard_about" value="Parent"><span>Parent</span></label>
+          <label class="option"><input type="radio" name="heard_about" value="Social media"><span>Social media</span></label>
+          <label class="option">
+            <input type="radio" name="heard_about" value="Other" data-followup-trigger="heard_about_other" data-followup-value="Other"><span>Other</span>
+          </label>
+        </div>
+        <input type="text" id="heard_about_other" class="followup" name="heard_about_other" placeholder="Tell us where">
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q12</span>
+        <p class="q-text">Would you recommend this program to a friend?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="would_recommend" value="Yes" required><span>Yes</span></label>
+          <label class="option"><input type="radio" name="would_recommend" value="Maybe"><span>Maybe</span></label>
+          <label class="option"><input type="radio" name="would_recommend" value="No"><span>No</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q13 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <p class="q-text">Anything you wish had been different?</p>
+        <textarea name="open_feedback" rows="3" placeholder="Your thoughts..."></textarea>
+      </div>
+
+      <p class="error-note"></p>
+
+      <div class="submit-row">
+        <button type="submit" class="pill-btn">🚀 Submit Survey</button>
+      </div>
+    </form>
+
+    <div id="thankyou" class="thankyou">
+      <div class="check">✓</div>
+      <h2>Thanks for the feedback!</h2>
+      <p>You're helping shape the next Global AI Venture Studio cohort.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  Global AI Venture Studio · A program of the Center for Future Global Leaders
+</footer>
+
+<script src="survey.js"></script>
+<script>initSurveyForm('studentForm', 'student');</script>
+</body>
+</html>

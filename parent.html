@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parent Survey — GAIVS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo-mark"><span class="globe"></span> AI GLOBAL VENTURE STUDIO</div>
+  <nav><a href="index.html">← Back</a></nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Parent & Guardian Feedback</div>
+  <h1>How was the program for <span class="accent">your family</span>?</h1>
+  <p class="sub">Your perspective on communication, logistics, and value helps us improve the next cohort. Takes about 5 minutes.</p>
+  <div class="time-chip">⏱ About 5 minutes</div>
+</section>
+
+<div class="form-wrap">
+  <div class="card">
+
+    <form id="parentForm" novalidate>
+
+      <div class="q-block">
+        <span class="q-number">Q1</span>
+        <p class="q-text">Overall, how valuable was this program for your child?</p>
+        <div class="options scale-row">
+          <label class="option"><input type="radio" name="overall_value" value="1" required><span>1</span></label>
+          <label class="option"><input type="radio" name="overall_value" value="2"><span>2</span></label>
+          <label class="option"><input type="radio" name="overall_value" value="3"><span>3</span></label>
+          <label class="option"><input type="radio" name="overall_value" value="4"><span>4</span></label>
+          <label class="option"><input type="radio" name="overall_value" value="5"><span>5</span></label>
+        </div>
+        <div class="scale-labels"><span>Not valuable</span><span>Extremely valuable</span></div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q2</span>
+        <p class="q-text">How was the workload/difficulty balance for your child's grade level?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="workload_balance" value="Too easy" required><span>Too easy</span></label>
+          <label class="option"><input type="radio" name="workload_balance" value="About right"><span>About right</span></label>
+          <label class="option"><input type="radio" name="workload_balance" value="Too hard"><span>Too hard</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q3</span>
+        <p class="q-text">Did you notice a change in how your child talks about or uses AI tools (like Sparky)?</p>
+        <div class="options stacked">
+          <label class="option"><input type="radio" name="ai_use_change" value="Yes, a positive change" required><span>Yes, a positive change</span></label>
+          <label class="option"><input type="radio" name="ai_use_change" value="No noticeable change"><span>No noticeable change</span></label>
+          <label class="option"><input type="radio" name="ai_use_change" value="Yes, some concerns"><span>Yes, but I have some concerns</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q4</span>
+        <p class="q-text">Were you aware of Leesa (the Discord assistant), and did it help keep your family in the loop?</p>
+        <div class="options stacked">
+          <label class="option"><input type="radio" name="leesa_awareness" value="Yes, it helped" required><span>Yes, and it helped</span></label>
+          <label class="option"><input type="radio" name="leesa_awareness" value="Aware, not that helpful"><span>Aware of it, but not that helpful</span></label>
+          <label class="option"><input type="radio" name="leesa_awareness" value="Not aware"><span>Wasn't aware of it</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q5</span>
+        <p class="q-text">How clear was communication throughout the program (emails, onboarding, updates)?</p>
+        <div class="options scale-row">
+          <label class="option"><input type="radio" name="comm_clarity" value="1" required><span>1</span></label>
+          <label class="option"><input type="radio" name="comm_clarity" value="2"><span>2</span></label>
+          <label class="option"><input type="radio" name="comm_clarity" value="3"><span>3</span></label>
+          <label class="option"><input type="radio" name="comm_clarity" value="4"><span>4</span></label>
+          <label class="option"><input type="radio" name="comm_clarity" value="5"><span>5</span></label>
+        </div>
+        <div class="scale-labels"><span>Not clear</span><span>Extremely clear</span></div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q6</span>
+        <p class="q-text">Was registering / signing the Onboarding Agreement at ailiteracy.cfgltoday.org easy?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="registration_ease" value="Very easy" required><span>Very easy</span></label>
+          <label class="option"><input type="radio" name="registration_ease" value="Easy"><span>Easy</span></label>
+          <label class="option"><input type="radio" name="registration_ease" value="Okay"><span>Okay</span></label>
+          <label class="option"><input type="radio" name="registration_ease" value="Difficult"><span>Difficult</span></label>
+          <label class="option"><input type="radio" name="registration_ease" value="Very difficult"><span>Very difficult</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q7</span>
+        <p class="q-text">Did you or your child run into access issues (SparkEd login, Discord invite, credentials)?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="access_issues" value="Yes" required data-followup-trigger="access_issues_detail" data-followup-value="Yes"><span>Yes</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="access_issues" value="No" data-followup-trigger="access_issues_detail" data-followup-value="Yes"><span>No</span>
+          </label>
+        </div>
+        <textarea id="access_issues_detail" class="followup" name="access_issues_detail" rows="2" placeholder="What happened?"></textarea>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q8</span>
+        <p class="q-text">How did you first hear about this program?</p>
+        <div class="options stacked">
+          <label class="option"><input type="radio" name="heard_about" value="School" required><span>School</span></label>
+          <label class="option"><input type="radio" name="heard_about" value="Friend"><span>Friend</span></label>
+          <label class="option"><input type="radio" name="heard_about" value="Social media"><span>Social media</span></label>
+          <label class="option"><input type="radio" name="heard_about" value="Search"><span>Search engine</span></label>
+          <label class="option">
+            <input type="radio" name="heard_about" value="Other" data-followup-trigger="heard_about_other" data-followup-value="Other"><span>Other</span>
+          </label>
+        </div>
+        <input type="text" id="heard_about_other" class="followup" name="heard_about_other" placeholder="Tell us where">
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q9</span>
+        <p class="q-text">What was the main reason you enrolled your child?</p>
+        <div class="options stacked">
+          <label class="option"><input type="radio" name="enroll_reason" value="AI skills" required><span>Building AI skills</span></label>
+          <label class="option"><input type="radio" name="enroll_reason" value="Entrepreneurship"><span>Entrepreneurship experience</span></label>
+          <label class="option"><input type="radio" name="enroll_reason" value="Extracurricular"><span>Extracurricular / résumé builder</span></label>
+          <label class="option"><input type="radio" name="enroll_reason" value="Recommended"><span>Recommended by someone</span></label>
+          <label class="option">
+            <input type="radio" name="enroll_reason" value="Other" data-followup-trigger="enroll_reason_other" data-followup-value="Other"><span>Other</span>
+          </label>
+        </div>
+        <input type="text" id="enroll_reason_other" class="followup" name="enroll_reason_other" placeholder="Tell us more">
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q10</span>
+        <p class="q-text">Would you enroll your child in a future cohort, or recommend this to another family?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="would_recommend" value="Yes" required><span>Yes</span></label>
+          <label class="option"><input type="radio" name="would_recommend" value="Maybe"><span>Maybe</span></label>
+          <label class="option"><input type="radio" name="would_recommend" value="No"><span>No</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q11 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <p class="q-text">Any feedback on the Global Showcase, guest speakers, or final pitch?</p>
+        <textarea name="showcase_feedback" rows="3" placeholder="Your thoughts..."></textarea>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q12 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <p class="q-text">Anything you'd want changed for the next cohort?</p>
+        <textarea name="change_next_time" rows="3" placeholder="Your thoughts..."></textarea>
+      </div>
+
+      <p class="error-note"></p>
+
+      <div class="submit-row">
+        <button type="submit" class="pill-btn">🚀 Submit Survey</button>
+      </div>
+    </form>
+
+    <div id="thankyou" class="thankyou">
+      <div class="check">✓</div>
+      <h2>Thank you!</h2>
+      <p>We appreciate you taking the time — this directly shapes the next cohort.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  Global AI Venture Studio · A program of the Center for Future Global Leaders
+</footer>
+
+<script src="survey.js"></script>
+<script>initSurveyForm('parentForm', 'parent');</script>
+</body>
+</html>
