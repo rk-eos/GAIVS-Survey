@@ -1,8 +1,7 @@
 # GAIVS End-of-Program Surveys
 
 Two branded survey pages (`student.html`, `parent.html`) that post responses
-straight into your Google Sheet:
-https://docs.google.com/spreadsheets/d/1G26l0zywtADuLUTdHobGmVoMt2gYIg1DhYjD4GWZR0c/edit
+straight into your Google Sheet
 
 No paid tools, no separate database — just GitHub Pages + a free Google Apps
 Script "Web App" acting as the receiving endpoint.
