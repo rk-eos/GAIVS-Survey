@@ -3,24 +3,25 @@
    See README.md for deployment steps. */
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzS6wS-jegC4FtVNIkB5GQ663wplieTEDqJG--snt5ei7pDoVVK9ibghR-9zIO3qux5pg/exec";
 
-// Toggle .selected class on pill options when their radio/checkbox is chosen
+// Toggle .selected class on pill options, and show/hide any followup
+// (e.g. "Other, tell us more") tied to the group's currently selected value.
 document.querySelectorAll('.options').forEach(group => {
   group.addEventListener('change', () => {
     group.querySelectorAll('.option').forEach(opt => {
       const input = opt.querySelector('input');
       opt.classList.toggle('selected', input.checked);
     });
-  });
-});
 
-// Show/hide conditional follow-up textareas (e.g. "if yes, what happened?")
-document.querySelectorAll('[data-followup-trigger]').forEach(input => {
-  input.addEventListener('change', () => {
-    const targetId = input.getAttribute('data-followup-trigger');
-    const showOn = input.getAttribute('data-followup-value');
-    const target = document.getElementById(targetId);
-    if (!target) return;
-    target.classList.toggle('show', input.value === showOn && input.checked);
+    const triggerInput = group.querySelector('[data-followup-trigger]');
+    if (triggerInput) {
+      const targetId = triggerInput.getAttribute('data-followup-trigger');
+      const showOn = triggerInput.getAttribute('data-followup-value');
+      const target = document.getElementById(targetId);
+      const checkedInput = group.querySelector(`input[name="${triggerInput.name}"]:checked`);
+      if (target) {
+        target.classList.toggle('show', !!checkedInput && checkedInput.value === showOn);
+      }
+    }
   });
 });
 

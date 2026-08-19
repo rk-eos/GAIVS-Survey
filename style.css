@@ -219,9 +219,9 @@ a { color: inherit; }
   cursor: pointer;
   transition: all 0.15s ease;
   background: #fff;
-  flex: 1 1 auto;
+  flex: 1 1 140px;
   text-align: center;
-  min-width: 44px;
+  min-width: 100px;
 }
 
 .options.stacked .option { flex: 1 1 100%; text-align: left; }
