@@ -77,6 +77,12 @@ a { color: inherit; }
   letter-spacing: 0.2px;
 }
 
+.logo-mark img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 .logo-mark .globe {
   width: 30px;
   height: 30px;
