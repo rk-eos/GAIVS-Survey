@@ -344,7 +344,9 @@ footer.site-footer {
   border: 1.5px solid var(--line);
   border-radius: 18px;
   padding: 22px 22px;
-  width: 290px;
+  width: 100%;
+  max-width: 290px;
+  flex: 1 1 260px;
   text-align: left;
   text-decoration: none;
   color: var(--ink);
@@ -372,8 +374,28 @@ footer.site-footer {
 .landing-card .go { color: var(--gold-dark); font-weight: 700; font-size: 0.86rem; }
 
 @media (max-width: 640px) {
-  .site-header nav { display: none; }
-  .card { padding: 30px 22px; }
+  .site-header {
+    padding: 12px 5vw;
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .site-header nav { gap: 16px; }
+  .site-header nav a { font-size: 0.85rem; }
+  .logo-mark img { height: 26px; }
+  .hero { padding: 20px 5vw 16px; }
+  .hero p.sub { font-size: 0.92rem; }
+  .form-wrap { padding: 0 5vw; }
+  .card { padding: 24px 18px; }
+  .q-text { font-size: 0.98rem; }
   .scale-row { flex-wrap: wrap; }
   .scale-row .option { flex: 1 1 30%; }
+  .options .option { font-size: 0.9rem; padding: 11px 14px; }
+  .landing-cards { gap: 14px; }
+  .submit-row .pill-btn { width: 100%; justify-content: center; }
 }
+
+@media (max-width: 400px) {
+  .hero h1 { font-size: 1.5rem; }
+  .site-header nav { gap: 12px; }
+}
+
