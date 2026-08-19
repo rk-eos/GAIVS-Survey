@@ -1,7 +1,7 @@
 /* ---------- CONFIG ----------
    Paste your deployed Google Apps Script Web App URL below.
    See README.md for deployment steps. */
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzBRj17Bdf1ji2zopJJzMUH491OD5wXcX4-01tnCgT0kJiBfsizDkMYX6MCCYaf0TfdVA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzS6wS-jegC4FtVNIkB5GQ663wplieTEDqJG--snt5ei7pDoVVK9ibghR-9zIO3qux5pg/exec";
 
 // Toggle .selected class on pill options when their radio/checkbox is chosen
 document.querySelectorAll('.options').forEach(group => {
