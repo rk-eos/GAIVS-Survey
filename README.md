@@ -62,3 +62,14 @@ these tabs automatically on first submission).
   full feedback window.
 - If Apps Script ever needs re-authorizing (e.g. after editing the script),
   redeploy via **Deploy → Manage deployments → Edit → New version**.
+- **Duplicate-email check**: each submission's email is compared against
+  every existing row in that form's tab. If it matches, the row is rejected
+  and the person sees a message asking them to contact staff instead of a
+  silent overwrite.
+- **Column layout changed** (email added as the 2nd column on both sheets;
+  parent's "Leesa Awareness" and "Access Issues" columns were removed).
+  If you already have a **Student Responses** or **Parent Responses** tab
+  from before this change, either delete that tab (the script will recreate
+  it with the correct headers on the next submission) or manually adjust its
+  header row/columns to match `STUDENT_HEADERS` / `PARENT_HEADERS` in
+  `apps-script.gs`.
