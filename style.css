@@ -387,9 +387,8 @@ footer.site-footer {
   .form-wrap { padding: 0 5vw; }
   .card { padding: 24px 18px; }
   .q-text { font-size: 0.98rem; }
-  .scale-row { flex-wrap: wrap; }
-  .scale-row .option { flex: 1 1 30%; }
   .options .option { font-size: 0.9rem; padding: 11px 14px; }
+  .scale-row .option { padding: 10px 4px; font-size: 0.88rem; }
   .landing-cards { gap: 14px; }
   .submit-row .pill-btn { width: 100%; justify-content: center; }
 }
