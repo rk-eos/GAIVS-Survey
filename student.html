@@ -30,6 +30,13 @@
 
       <div class="q-block">
         <span class="q-number">Q1</span>
+        <p class="q-text">What's your email address?</p>
+        <p class="q-help">Just to confirm you're on the right survey and to avoid duplicate entries — your individual answers stay anonymous in how we report results.</p>
+        <input type="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q2</span>
         <p class="q-text">Overall, how much did you enjoy Global AI Venture Studio?</p>
         <div class="options scale-row" role="radiogroup">
           <label class="option"><input type="radio" name="enjoyment" value="1" required><span>1</span></label>
@@ -42,7 +49,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q2</span>
+        <span class="q-number">Q3</span>
         <p class="q-text">Compared to before the program, how confident do you feel using AI tools responsibly?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="ai_confidence" value="Much more confident" required><span>Much more confident</span></label>
@@ -53,19 +60,19 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q3</span>
+        <span class="q-number">Q4</span>
         <p class="q-text">Which part of the program did you enjoy most?</p>
         <div class="options stacked">
-          <label class="option"><input type="radio" name="favorite_part" value="Week 1: The Spark" required><span>Week 1: The Spark</span></label>
-          <label class="option"><input type="radio" name="favorite_part" value="Week 2: The Build"><span>Week 2: The Build</span></label>
-          <label class="option"><input type="radio" name="favorite_part" value="Week 3: The Brand"><span>Week 3: The Brand</span></label>
-          <label class="option"><input type="radio" name="favorite_part" value="Week 4: The Pitch"><span>Week 4: The Pitch</span></label>
+          <label class="option"><input type="radio" name="favorite_part" value="Week 1: The Spark" required><span>Week 1: The Spark (finding the problem)</span></label>
+          <label class="option"><input type="radio" name="favorite_part" value="Week 2: The Build"><span>Week 2: The Build (prototype)</span></label>
+          <label class="option"><input type="radio" name="favorite_part" value="Week 3: The Brand"><span>Week 3: The Brand (pitch deck)</span></label>
+          <label class="option"><input type="radio" name="favorite_part" value="Week 4: The Pitch"><span>Week 4: The Pitch (recording & submitting)</span></label>
           <label class="option"><input type="radio" name="favorite_part" value="Guest speakers"><span>Guest speakers</span></label>
         </div>
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q4</span>
+        <span class="q-number">Q5</span>
         <p class="q-text">Was the workload too easy, too hard, or about right?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="workload" value="Too easy" required><span>Too easy</span></label>
@@ -77,7 +84,31 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q5</span>
+        <span class="q-number">Q6</span>
+        <p class="q-text">I believe the GAIVS program has improved my <strong>AI fluency</strong> — the practical ability to work productively, critically, and safely with AI systems in daily tasks.</p>
+        <div class="options scale-row likert-row">
+          <label class="option"><input type="radio" name="ai_fluency" value="Strongly disagree" required><span>Strongly disagree</span></label>
+          <label class="option"><input type="radio" name="ai_fluency" value="Disagree"><span>Disagree</span></label>
+          <label class="option"><input type="radio" name="ai_fluency" value="Neutral"><span>Neutral</span></label>
+          <label class="option"><input type="radio" name="ai_fluency" value="Agree"><span>Agree</span></label>
+          <label class="option"><input type="radio" name="ai_fluency" value="Strongly agree"><span>Strongly agree</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q7</span>
+        <p class="q-text">I believe the GAIVS program has improved my <strong>AI literacy</strong> — knowing how AI systems work at a high level, writing effective prompts, evaluating outputs for errors or bias, and recognizing the ethical and social impacts of these tools.</p>
+        <div class="options scale-row likert-row">
+          <label class="option"><input type="radio" name="ai_literacy" value="Strongly disagree" required><span>Strongly disagree</span></label>
+          <label class="option"><input type="radio" name="ai_literacy" value="Disagree"><span>Disagree</span></label>
+          <label class="option"><input type="radio" name="ai_literacy" value="Neutral"><span>Neutral</span></label>
+          <label class="option"><input type="radio" name="ai_literacy" value="Agree"><span>Agree</span></label>
+          <label class="option"><input type="radio" name="ai_literacy" value="Strongly agree"><span>Strongly agree</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q8</span>
         <p class="q-text">How useful was learning to write good prompts (Role / Task / Audience / Format)?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="prompting_useful" value="1" required><span>1</span></label>
@@ -90,7 +121,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q6</span>
+        <span class="q-number">Q9</span>
         <p class="q-text">Did you ever catch Sparky making something up, that is, a hallucination?</p>
         <div class="options">
           <label class="option"><input type="radio" name="caught_hallucination" value="Yes" required><span>Yes</span></label>
@@ -100,7 +131,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q7</span>
+        <span class="q-number">Q10</span>
         <p class="q-text">Going forward, how likely are you to double-check facts an AI tool gives you?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="future_verification" value="1" required><span>1</span></label>
@@ -113,7 +144,19 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q8</span>
+        <span class="q-number">Q11</span>
+        <p class="q-text">I found Sparky to be a helpful AI tool to iterate with.</p>
+        <div class="options scale-row likert-row">
+          <label class="option"><input type="radio" name="sparky_helpful" value="Strongly disagree" required><span>Strongly disagree</span></label>
+          <label class="option"><input type="radio" name="sparky_helpful" value="Disagree"><span>Disagree</span></label>
+          <label class="option"><input type="radio" name="sparky_helpful" value="Neutral"><span>Neutral</span></label>
+          <label class="option"><input type="radio" name="sparky_helpful" value="Agree"><span>Agree</span></label>
+          <label class="option"><input type="radio" name="sparky_helpful" value="Strongly agree"><span>Strongly agree</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q12</span>
         <p class="q-text">How helpful was Leesa (the Discord assistant) in keeping you on track with deadlines and reminders?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="leesa_helpfulness" value="Very helpful" required><span>Very helpful</span></label>
@@ -124,7 +167,31 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q9</span>
+        <span class="q-number">Q13</span>
+        <p class="q-text">The GAIVS team was responsive and communicative over emails and Discord.</p>
+        <div class="options scale-row likert-row">
+          <label class="option"><input type="radio" name="team_responsive" value="Strongly disagree" required><span>Strongly disagree</span></label>
+          <label class="option"><input type="radio" name="team_responsive" value="Disagree"><span>Disagree</span></label>
+          <label class="option"><input type="radio" name="team_responsive" value="Neutral"><span>Neutral</span></label>
+          <label class="option"><input type="radio" name="team_responsive" value="Agree"><span>Agree</span></label>
+          <label class="option"><input type="radio" name="team_responsive" value="Strongly agree"><span>Strongly agree</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q14</span>
+        <p class="q-text">I found the live speaker sessions relevant and useful for the purpose of the competition.</p>
+        <div class="options scale-row likert-row">
+          <label class="option"><input type="radio" name="speaker_relevance" value="Strongly disagree" required><span>Strongly disagree</span></label>
+          <label class="option"><input type="radio" name="speaker_relevance" value="Disagree"><span>Disagree</span></label>
+          <label class="option"><input type="radio" name="speaker_relevance" value="Neutral"><span>Neutral</span></label>
+          <label class="option"><input type="radio" name="speaker_relevance" value="Agree"><span>Agree</span></label>
+          <label class="option"><input type="radio" name="speaker_relevance" value="Strongly agree"><span>Strongly agree</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q15</span>
         <p class="q-text">Was registering and logging into SparkEd easy?</p>
         <div class="options">
           <label class="option"><input type="radio" name="registration_ease" value="Very easy" required><span>Very easy</span></label>
@@ -136,7 +203,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q10</span>
+        <span class="q-number">Q16</span>
         <p class="q-text">Did you have any technical problems with SparkEd, Discord, Sparky, or CodeBox?</p>
         <div class="options">
           <label class="option">
@@ -146,11 +213,11 @@
             <input type="radio" name="tech_issues" value="No" data-followup-trigger="tech_issues_detail" data-followup-value="Yes"><span>No</span>
           </label>
         </div>
-        <textarea id="tech_issues_detail" class="followup" name="tech_issues_detail" rows="2" placeholder="What happened?"></textarea>
+        <textarea id="tech_issues_detail" class="followup" name="tech_issues_detail" rows="2" placeholder="Please tell us what happened" data-required-on-show></textarea>
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q11</span>
+        <span class="q-number">Q17</span>
         <p class="q-text">How did you first hear about this program?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="heard_about" value="School" required><span>School</span></label>
@@ -165,7 +232,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q12</span>
+        <span class="q-number">Q18</span>
         <p class="q-text">Would you recommend this program to a friend?</p>
         <div class="options">
           <label class="option"><input type="radio" name="would_recommend" value="Yes" required><span>Yes</span></label>
@@ -175,7 +242,13 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q13 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <span class="q-number">Q19</span>
+        <p class="q-text">Looking back at your GAIVS journey, what is one thing you will absolutely keep applying or using in the future?</p>
+        <textarea name="key_takeaway" rows="3" placeholder="Your thoughts..." required></textarea>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q20 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
         <p class="q-text">Anything you wish had been different?</p>
         <textarea name="open_feedback" rows="3" placeholder="Your thoughts..."></textarea>
       </div>

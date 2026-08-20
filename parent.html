@@ -30,6 +30,13 @@
 
       <div class="q-block">
         <span class="q-number">Q1</span>
+        <p class="q-text">What's your email address?</p>
+        <p class="q-help">Just to confirm you're on the right survey and to avoid duplicate entries — your individual answers stay anonymous in how we report results.</p>
+        <input type="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q2</span>
         <p class="q-text">Overall, how valuable was this program for your child?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="overall_value" value="1" required><span>1</span></label>
@@ -42,9 +49,9 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q2</span>
+        <span class="q-number">Q3</span>
         <p class="q-text">How was the workload/difficulty balance for your child's grade level?</p>
-        <div class="options">
+        <div class="options scale-row" style="--cols:3;">
           <label class="option"><input type="radio" name="workload_balance" value="Too easy" required><span>Too easy</span></label>
           <label class="option"><input type="radio" name="workload_balance" value="About right"><span>About right</span></label>
           <label class="option"><input type="radio" name="workload_balance" value="Too hard"><span>Too hard</span></label>
@@ -52,7 +59,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q3</span>
+        <span class="q-number">Q4</span>
         <p class="q-text">Did you notice a change in how your child talks about or uses AI tools?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="ai_use_change" value="Yes, a positive change" required><span>Yes, a positive change</span></label>
@@ -62,7 +69,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q4</span>
+        <span class="q-number">Q5</span>
         <p class="q-text">How clear was communication throughout the program (emails, onboarding, updates)?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="comm_clarity" value="1" required><span>1</span></label>
@@ -75,7 +82,19 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q5</span>
+        <span class="q-number">Q6</span>
+        <p class="q-text">My child was supported throughout the GAIVS program.</p>
+        <div class="options scale-row likert-row">
+          <label class="option"><input type="radio" name="child_supported" value="Strongly disagree" required><span>Strongly disagree</span></label>
+          <label class="option"><input type="radio" name="child_supported" value="Disagree"><span>Disagree</span></label>
+          <label class="option"><input type="radio" name="child_supported" value="Agree"><span>Agree</span></label>
+          <label class="option"><input type="radio" name="child_supported" value="Strongly agree"><span>Strongly agree</span></label>
+          <label class="option"><input type="radio" name="child_supported" value="Unsure"><span>Unsure</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q7</span>
         <p class="q-text">Was registering / signing the Onboarding Agreement at ailiteracy.cfgltoday.org easy?</p>
         <div class="options">
           <label class="option"><input type="radio" name="registration_ease" value="Very easy" required><span>Very easy</span></label>
@@ -87,21 +106,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q6</span>
-        <p class="q-text">Did you or your child run into access issues (SparkEd login, Discord invite, credentials)?</p>
-        <div class="options">
-          <label class="option">
-            <input type="radio" name="access_issues" value="Yes" required data-followup-trigger="access_issues_detail" data-followup-value="Yes"><span>Yes</span>
-          </label>
-          <label class="option">
-            <input type="radio" name="access_issues" value="No" data-followup-trigger="access_issues_detail" data-followup-value="Yes"><span>No</span>
-          </label>
-        </div>
-        <textarea id="access_issues_detail" class="followup" name="access_issues_detail" rows="2" placeholder="What happened?"></textarea>
-      </div>
-
-      <div class="q-block">
-        <span class="q-number">Q7</span>
+        <span class="q-number">Q8</span>
         <p class="q-text">How did you first hear about this program?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="heard_about" value="School" required><span>School</span></label>
@@ -116,7 +121,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q8</span>
+        <span class="q-number">Q9</span>
         <p class="q-text">What was the main reason you enrolled your child?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="enroll_reason" value="AI skills" required><span>Building AI skills</span></label>
@@ -131,7 +136,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q9</span>
+        <span class="q-number">Q10</span>
         <p class="q-text">Would you enroll your child in a future cohort, or recommend this to another family?</p>
         <div class="options">
           <label class="option"><input type="radio" name="would_recommend" value="Yes" required><span>Yes</span></label>
@@ -141,13 +146,13 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q10 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <span class="q-number">Q11 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
         <p class="q-text">Any feedback on the Global Showcase, guest speakers, or final pitch?</p>
         <textarea name="showcase_feedback" rows="3" placeholder="Your thoughts..."></textarea>
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q11 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <span class="q-number">Q12 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
         <p class="q-text">Anything you'd want changed for the next cohort?</p>
         <textarea name="change_next_time" rows="3" placeholder="Your thoughts..."></textarea>
       </div>

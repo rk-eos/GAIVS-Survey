@@ -5,6 +5,8 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzS6wS-jegC4FtVNIkB5
 
 // Toggle .selected class on pill options, and show/hide any followup
 // (e.g. "Other, tell us more") tied to the group's currently selected value.
+// Also toggles `required` on followups marked data-required-on-show, so
+// e.g. "please elaborate" only becomes mandatory once it's actually shown.
 document.querySelectorAll('.options').forEach(group => {
   group.addEventListener('change', () => {
     group.querySelectorAll('.option').forEach(opt => {
@@ -19,7 +21,11 @@ document.querySelectorAll('.options').forEach(group => {
       const target = document.getElementById(targetId);
       const checkedInput = group.querySelector(`input[name="${triggerInput.name}"]:checked`);
       if (target) {
-        target.classList.toggle('show', !!checkedInput && checkedInput.value === showOn);
+        const shouldShow = !!checkedInput && checkedInput.value === showOn;
+        target.classList.toggle('show', shouldShow);
+        if (target.hasAttribute('data-required-on-show')) {
+          target.required = shouldShow;
+        }
       }
     }
   });
@@ -56,6 +62,7 @@ function initSurveyForm(formId, formType) {
       return;
     }
 
+    errorNote.classList.remove('show');
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitting…';
 
@@ -66,12 +73,29 @@ function initSurveyForm(formId, formType) {
     };
 
     try {
-      await fetch(SCRIPT_URL, {
+      const response = await fetch(SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors', // Apps Script doesn't return CORS headers; fire-and-forget
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // keeps this a "simple request", avoiding CORS preflight
         body: JSON.stringify(payload)
       });
+
+      // Try to read the structured result (e.g. duplicate-email detection).
+      // If reading fails for any reason, assume the submission went through —
+      // the request itself already reached the server either way.
+      let result = null;
+      try {
+        result = await response.json();
+      } catch (parseErr) {
+        result = { ok: true };
+      }
+
+      if (result && result.ok === false && result.error === 'duplicate') {
+        errorNote.textContent = "It looks like this email has already submitted a response. If you need to update your answers, please reach out to a staff member.";
+        errorNote.classList.add('show');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Survey';
+        return;
+      }
 
       form.style.display = 'none';
       document.getElementById('thankyou').classList.add('show');

@@ -242,18 +242,21 @@ a { color: inherit; }
 }
 
 .scale-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 5), 1fr);
   gap: 10px;
 }
-.scale-row .option { flex: 1 1 0; padding: 12px 0; }
+.scale-row .option { padding: 12px 6px; }
 
 .scale-labels {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 5), 1fr);
   font-size: 0.8rem;
   color: var(--gray);
   margin-top: 8px;
 }
+.scale-labels span:first-child { grid-column: 1; text-align: left; }
+.scale-labels span:last-child { grid-column: -1; text-align: right; }
 
 textarea, input[type="text"] {
   width: 100%;
