@@ -243,14 +243,14 @@ a { color: inherit; }
 
 .scale-row {
   display: grid;
-  grid-template-columns: repeat(var(--cols, 5), 1fr);
+  grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr));
   gap: 10px;
 }
-.scale-row .option { padding: 12px 6px; }
+.scale-row .option { padding: 12px 6px; min-width: 0; }
 
 .scale-labels {
   display: grid;
-  grid-template-columns: repeat(var(--cols, 5), 1fr);
+  grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr));
   font-size: 0.8rem;
   color: var(--gray);
   margin-top: 8px;
