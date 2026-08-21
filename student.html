@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="style.css?v=1787333916">
+<link rel="stylesheet" href="style.css?v=1787335426">
 </head>
 <body>
 
@@ -61,6 +61,19 @@
 
       <div class="q-block">
         <span class="q-number">Q4</span>
+        <p class="q-text">How confident do you feel about presenting or pitching an idea to an audience now, compared to before the program?</p>
+        <div class="options scale-row">
+          <label class="option"><input type="radio" name="pitch_confidence" value="1" required><span>1</span></label>
+          <label class="option"><input type="radio" name="pitch_confidence" value="2"><span>2</span></label>
+          <label class="option"><input type="radio" name="pitch_confidence" value="3"><span>3</span></label>
+          <label class="option"><input type="radio" name="pitch_confidence" value="4"><span>4</span></label>
+          <label class="option"><input type="radio" name="pitch_confidence" value="5"><span>5</span></label>
+        </div>
+        <div class="scale-labels"><span>Not confident at all</span><span>Extremely confident</span></div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q5</span>
         <p class="q-text">Which part of the program did you enjoy most?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="favorite_part" value="Week 1: The Spark" required><span>Week 1: The Spark</span></label>
@@ -72,7 +85,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q5</span>
+        <span class="q-number">Q6</span>
         <p class="q-text">Was the workload too easy, too hard, or about right?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="workload" value="Too easy" required><span>Too easy</span></label>
@@ -84,7 +97,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q6</span>
+        <span class="q-number">Q7</span>
         <p class="q-text">I believe the GAIVS program has improved my <strong>AI fluency</strong> — the practical ability to work productively, critically, and safely with AI systems in daily tasks.</p>
         <div class="options scale-row likert-row">
           <label class="option"><input type="radio" name="ai_fluency" value="Strongly disagree" required><span>Strongly disagree</span></label>
@@ -96,7 +109,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q7</span>
+        <span class="q-number">Q8</span>
         <p class="q-text">I believe the GAIVS program has improved my <strong>AI literacy</strong> — knowing how AI systems work at a high level, writing effective prompts, evaluating outputs for errors or bias, and recognizing the ethical and social impacts of these tools.</p>
         <div class="options scale-row likert-row">
           <label class="option"><input type="radio" name="ai_literacy" value="Strongly disagree" required><span>Strongly disagree</span></label>
@@ -108,7 +121,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q8</span>
+        <span class="q-number">Q9</span>
         <p class="q-text">How useful was learning to write good prompts (Role / Task / Audience / Format)?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="prompting_useful" value="1" required><span>1</span></label>
@@ -121,8 +134,8 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q9</span>
-        <p class="q-text">Did you ever catch Sparky making something up, that is, a hallucination?</p>
+        <span class="q-number">Q10</span>
+        <p class="q-text">Did you ever catch Sparky (the AI assistant) making something up, that is, a hallucination?</p>
         <div class="options scale-row" style="--cols:3;">
           <label class="option"><input type="radio" name="caught_hallucination" value="Yes" required><span>Yes</span></label>
           <label class="option"><input type="radio" name="caught_hallucination" value="No"><span>No</span></label>
@@ -131,7 +144,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q10</span>
+        <span class="q-number">Q11</span>
         <p class="q-text">Going forward, how likely are you to double-check facts an AI tool gives you?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="future_verification" value="1" required><span>1</span></label>
@@ -144,8 +157,8 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q11</span>
-        <p class="q-text">I found Sparky to be a helpful AI tool to iterate with.</p>
+        <span class="q-number">Q12</span>
+        <p class="q-text">I found Sparky (the AI assistant) to be a helpful tool to iterate with.</p>
         <div class="options scale-row likert-row">
           <label class="option"><input type="radio" name="sparky_helpful" value="Strongly disagree" required><span>Strongly disagree</span></label>
           <label class="option"><input type="radio" name="sparky_helpful" value="Disagree"><span>Disagree</span></label>
@@ -156,7 +169,21 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q12</span>
+        <span class="q-number">Q13</span>
+        <p class="q-text">How helpful was CodeBox for building your actual project?</p>
+        <p class="q-help">1 = Not helpful at all, 5 = Extremely helpful.</p>
+        <div class="options scale-row" style="--cols:6;">
+          <label class="option"><input type="radio" name="codebox_helpful" value="1" required><span>1</span></label>
+          <label class="option"><input type="radio" name="codebox_helpful" value="2"><span>2</span></label>
+          <label class="option"><input type="radio" name="codebox_helpful" value="3"><span>3</span></label>
+          <label class="option"><input type="radio" name="codebox_helpful" value="4"><span>4</span></label>
+          <label class="option"><input type="radio" name="codebox_helpful" value="5"><span>5</span></label>
+          <label class="option"><input type="radio" name="codebox_helpful" value="Didn't use CodeBox"><span>I didn't use CodeBox</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q14</span>
         <p class="q-text">How helpful was Leesa (the Discord assistant) in keeping you on track with deadlines and reminders?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="leesa_helpfulness" value="Very helpful" required><span>Very helpful</span></label>
@@ -167,7 +194,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q13</span>
+        <span class="q-number">Q15</span>
         <p class="q-text">The GAIVS team was responsive and communicative over emails and Discord.</p>
         <div class="options scale-row likert-row">
           <label class="option"><input type="radio" name="team_responsive" value="Strongly disagree" required><span>Strongly disagree</span></label>
@@ -179,19 +206,32 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q14</span>
+        <span class="q-number">Q16</span>
         <p class="q-text">I found the live speaker sessions relevant and useful for the purpose of the competition.</p>
-        <div class="options scale-row likert-row">
+        <div class="options scale-row likert-row" style="--cols:6;">
           <label class="option"><input type="radio" name="speaker_relevance" value="Strongly disagree" required><span>Strongly disagree</span></label>
           <label class="option"><input type="radio" name="speaker_relevance" value="Disagree"><span>Disagree</span></label>
           <label class="option"><input type="radio" name="speaker_relevance" value="Neutral"><span>Neutral</span></label>
           <label class="option"><input type="radio" name="speaker_relevance" value="Agree"><span>Agree</span></label>
           <label class="option"><input type="radio" name="speaker_relevance" value="Strongly agree"><span>Strongly agree</span></label>
+          <label class="option"><input type="radio" name="speaker_relevance" value="Did not attend"><span>Did not attend</span></label>
         </div>
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q15</span>
+        <span class="q-number">Q17</span>
+        <p class="q-text">I found SparkEd easy to navigate.</p>
+        <div class="options scale-row likert-row">
+          <label class="option"><input type="radio" name="sparked_navigation" value="Strongly disagree" required><span>Strongly disagree</span></label>
+          <label class="option"><input type="radio" name="sparked_navigation" value="Disagree"><span>Disagree</span></label>
+          <label class="option"><input type="radio" name="sparked_navigation" value="Neutral"><span>Neutral</span></label>
+          <label class="option"><input type="radio" name="sparked_navigation" value="Agree"><span>Agree</span></label>
+          <label class="option"><input type="radio" name="sparked_navigation" value="Strongly agree"><span>Strongly agree</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q18</span>
         <p class="q-text">Was registering and logging into SparkEd easy?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="registration_ease" value="Very easy" required><span>Very easy</span></label>
@@ -203,7 +243,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q16</span>
+        <span class="q-number">Q19</span>
         <p class="q-text">Did you have any technical problems with SparkEd, Discord, Sparky, or CodeBox?</p>
         <div class="options scale-row" style="--cols:2;">
           <label class="option">
@@ -217,7 +257,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q17</span>
+        <span class="q-number">Q20</span>
         <p class="q-text">How did you first hear about this program?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="heard_about" value="School" required><span>School</span></label>
@@ -232,7 +272,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q18</span>
+        <span class="q-number">Q21</span>
         <p class="q-text">Would you recommend this program to a friend?</p>
         <div class="options scale-row" style="--cols:3;">
           <label class="option"><input type="radio" name="would_recommend" value="Yes" required><span>Yes</span></label>
@@ -242,13 +282,13 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q19</span>
+        <span class="q-number">Q22</span>
         <p class="q-text">Looking back at your GAIVS journey, what is one thing you will absolutely keep applying or using in the future?</p>
         <textarea name="key_takeaway" rows="3" placeholder="Your thoughts..." required></textarea>
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q20 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <span class="q-number">Q23 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
         <p class="q-text">Anything you wish had been different?</p>
         <textarea name="open_feedback" rows="3" placeholder="Your thoughts..."></textarea>
       </div>
@@ -273,7 +313,7 @@
   Global AI Venture Studio · A program of the Center for Future Global Leaders
 </footer>
 
-<script src="survey.js?v=1787333916"></script>
+<script src="survey.js?v=1787335426"></script>
 <script>initSurveyForm('studentForm', 'student');</script>
 </body>
 </html>

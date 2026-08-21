@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="style.css?v=1787333916">
+<link rel="stylesheet" href="style.css?v=1787335426">
 </head>
 <body>
 
@@ -60,16 +60,30 @@
 
       <div class="q-block">
         <span class="q-number">Q4</span>
+        <p class="q-text">How did the multi-week summer schedule work for your family's routine?</p>
+        <div class="options scale-row" style="--cols:4;">
+          <label class="option"><input type="radio" name="schedule_pacing" value="Perfect length and pacing" required><span>Perfect length and pacing</span></label>
+          <label class="option"><input type="radio" name="schedule_pacing" value="Too long"><span>Too long</span></label>
+          <label class="option"><input type="radio" name="schedule_pacing" value="Too short"><span>Too short</span></label>
+          <label class="option"><input type="radio" name="schedule_pacing" value="Sessions were too packed"><span>Sessions were too packed</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q5</span>
         <p class="q-text">Did you notice a change in how your child talks about or uses AI tools?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="ai_use_change" value="Yes, a positive change" required><span>Yes, a positive change</span></label>
           <label class="option"><input type="radio" name="ai_use_change" value="No noticeable change"><span>No noticeable change</span></label>
           <label class="option"><input type="radio" name="ai_use_change" value="Yes, some concerns"><span>Yes, but I have some concerns</span></label>
         </div>
+        <p class="q-number" style="margin-top:16px;">Optional</p>
+        <p class="q-text" style="font-size:0.95rem;">Feel free to explain your answer.</p>
+        <textarea name="ai_use_change_explain" rows="2" placeholder="Your thoughts..."></textarea>
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q5</span>
+        <span class="q-number">Q6</span>
         <p class="q-text">How clear was communication throughout the program (emails, onboarding, updates)?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="comm_clarity" value="1" required><span>1</span></label>
@@ -82,7 +96,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q6</span>
+        <span class="q-number">Q7</span>
         <p class="q-text">My child was supported throughout the GAIVS program.</p>
         <div class="options scale-row likert-row">
           <label class="option"><input type="radio" name="child_supported" value="Strongly disagree" required><span>Strongly disagree</span></label>
@@ -94,7 +108,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q7</span>
+        <span class="q-number">Q8</span>
         <p class="q-text">Was registering / signing the Onboarding Agreement at ailiteracy.cfgltoday.org easy?</p>
         <div class="options scale-row">
           <label class="option"><input type="radio" name="registration_ease" value="Very easy" required><span>Very easy</span></label>
@@ -106,7 +120,18 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q8</span>
+        <span class="q-number">Q9</span>
+        <p class="q-text">How independently was your child able to navigate the program's digital tools and daily platforms?</p>
+        <div class="options scale-row" style="--cols:4;">
+          <label class="option"><input type="radio" name="digital_independence" value="Highly independent" required><span>Highly independent</span></label>
+          <label class="option"><input type="radio" name="digital_independence" value="Needed occasional help"><span>Needed occasional help</span></label>
+          <label class="option"><input type="radio" name="digital_independence" value="Needed frequent help"><span>Needed frequent help</span></label>
+          <label class="option"><input type="radio" name="digital_independence" value="Very difficult to navigate"><span>Very difficult to navigate</span></label>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q10</span>
         <p class="q-text">How did you first hear about this program?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="heard_about" value="School" required><span>School</span></label>
@@ -121,10 +146,12 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q9</span>
+        <span class="q-number">Q11</span>
         <p class="q-text">What was the main reason you enrolled your child?</p>
         <div class="options stacked">
           <label class="option"><input type="radio" name="enroll_reason" value="AI skills" required><span>Building AI skills</span></label>
+          <label class="option"><input type="radio" name="enroll_reason" value="AI literacy"><span>To build AI literacy</span></label>
+          <label class="option"><input type="radio" name="enroll_reason" value="Global cohort"><span>For the global, multi-school cohort experience</span></label>
           <label class="option"><input type="radio" name="enroll_reason" value="Entrepreneurship"><span>Entrepreneurship experience</span></label>
           <label class="option"><input type="radio" name="enroll_reason" value="Extracurricular"><span>Extracurricular / résumé builder</span></label>
           <label class="option"><input type="radio" name="enroll_reason" value="Recommended"><span>Recommended by someone</span></label>
@@ -136,7 +163,7 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q10</span>
+        <span class="q-number">Q12</span>
         <p class="q-text">Would you enroll your child in a future cohort, or recommend this to another family?</p>
         <div class="options scale-row" style="--cols:3;">
           <label class="option"><input type="radio" name="would_recommend" value="Yes" required><span>Yes</span></label>
@@ -146,15 +173,21 @@
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q11 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <span class="q-number">Q13 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
         <p class="q-text">Any feedback on the Global Showcase, guest speakers, or final pitch?</p>
         <textarea name="showcase_feedback" rows="3" placeholder="Your thoughts..."></textarea>
       </div>
 
       <div class="q-block">
-        <span class="q-number">Q12 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <span class="q-number">Q14 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
         <p class="q-text">Anything you'd want changed for the next cohort?</p>
         <textarea name="change_next_time" rows="3" placeholder="Your thoughts..."></textarea>
+      </div>
+
+      <div class="q-block">
+        <span class="q-number">Q15 <span style="color:var(--gray); font-weight:500;">(optional)</span></span>
+        <p class="q-text">If we offered a follow-up studio, what topics would you most want us to cover?</p>
+        <textarea name="followup_topics" rows="3" placeholder="Your thoughts..."></textarea>
       </div>
 
       <p class="error-note"></p>
@@ -177,7 +210,7 @@
   Global AI Venture Studio · A program of the Center for Future Global Leaders
 </footer>
 
-<script src="survey.js?v=1787333916"></script>
+<script src="survey.js?v=1787335426"></script>
 <script>initSurveyForm('parentForm', 'parent');</script>
 </body>
 </html>
