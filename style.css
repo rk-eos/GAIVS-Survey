@@ -160,7 +160,7 @@ a { color: inherit; }
 
 /* ---------- Form ---------- */
 .form-wrap {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto 100px;
   padding: 0 6vw;
 }
@@ -169,7 +169,7 @@ a { color: inherit; }
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 24px;
-  padding: 40px 40px 44px;
+  padding: 44px 48px 48px;
   box-shadow: 0 20px 50px -30px rgba(31, 76, 83, 0.25);
 }
 
@@ -205,23 +205,24 @@ a { color: inherit; }
 .options {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
+  gap: 12px;
+  margin-top: 16px;
 }
 
 .option {
   position: relative;
   border: 1.5px solid var(--line);
   border-radius: 12px;
-  padding: 12px 18px;
-  font-size: 0.95rem;
+  padding: 15px 20px;
+  font-size: 1rem;
   font-weight: 500;
+  line-height: 1.35;
   cursor: pointer;
   transition: all 0.15s ease;
   background: #fff;
-  flex: 1 1 140px;
+  flex: 1 1 150px;
   text-align: center;
-  min-width: 100px;
+  min-width: 110px;
 }
 
 .options.stacked .option { flex: 1 1 100%; text-align: left; }
@@ -244,16 +245,16 @@ a { color: inherit; }
 .scale-row {
   display: grid;
   grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
-.scale-row .option { padding: 12px 6px; min-width: 0; }
+.scale-row .option { padding: 15px 8px; min-width: 0; }
 
 .scale-labels {
   display: grid;
   grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr));
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--gray);
-  margin-top: 8px;
+  margin-top: 10px;
 }
 .scale-labels span:first-child { grid-column: 1; text-align: left; }
 .scale-labels span:last-child { grid-column: -1; text-align: right; }
@@ -388,10 +389,10 @@ footer.site-footer {
   .hero { padding: 20px 5vw 16px; }
   .hero p.sub { font-size: 0.92rem; }
   .form-wrap { padding: 0 5vw; }
-  .card { padding: 24px 18px; }
+  .card { padding: 26px 20px; }
   .q-text { font-size: 0.98rem; }
-  .options .option { font-size: 0.9rem; padding: 11px 14px; }
-  .scale-row .option { padding: 10px 4px; font-size: 0.88rem; }
+  .options .option { font-size: 0.92rem; padding: 12px 15px; }
+  .scale-row .option { padding: 11px 5px; font-size: 0.9rem; }
   .landing-cards { gap: 14px; }
   .submit-row .pill-btn { width: 100%; justify-content: center; }
 }
